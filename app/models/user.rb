@@ -14,4 +14,8 @@ class User < ApplicationRecord
   has_many :likes
 
   validates :username, presence: true, uniqueness: true
+
+  def like?(tweet)
+    tweet.likes.where(user_id: id).any
+  end
 end
