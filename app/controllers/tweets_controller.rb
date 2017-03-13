@@ -7,8 +7,8 @@ class TweetsController < ApplicationController
   end
 
   def show
-
   end
+
 
   def new
     @tweet = Tweet.new
@@ -27,8 +27,8 @@ class TweetsController < ApplicationController
   end
 
   def edit
-
   end
+
 
   def update
     if @tweet.update(tweet_params)
